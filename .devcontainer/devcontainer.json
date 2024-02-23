@@ -2,9 +2,7 @@
 	"name": "pygame",
 	"image": "mcr.microsoft.com/devcontainers/python:0-3.11-bullseye",
 	"features": {
-    		"ghcr.io/devcontainers/features/desktop-lite:1": {}
-	},
-	"features": {
+    		"ghcr.io/devcontainers/features/desktop-lite:1": {},
     		"ghcr.io/devcontainers/features/python:1": {}
 	},
 	"postCreateCommand": "pip3 install -r requirements.txt",
@@ -14,5 +12,11 @@
 		      "streetsidesoftware.code-spell-checker"
     		]
   		}
+	},
+	"forwardPorts": [6080],
+	"portsAttributes": {
+	  "6080": {
+		"label": "desktop"
+	  }
 	}
 }
